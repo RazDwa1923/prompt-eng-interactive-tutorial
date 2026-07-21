@@ -1,0 +1,14 @@
+[
+  {
+    "task": "Extract the AWS region from an S3 bucket ARN like 'arn:aws:s3:::my-bucket-us-east-1'",
+    "format": "regex"
+  },
+  {
+    "task": "Create a JSON CloudFormation template that defines an S3 bucket with versioning enabled",
+    "format": "json"
+  },
+  {
+    "task": "Write a Python function that takes an AWS IAM policy document and returns all the actions (Action field values) that are allowed",
+    "format": "python"
+  }
+]
