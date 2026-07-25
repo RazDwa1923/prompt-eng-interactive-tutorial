@@ -1,14 +1,17 @@
 [
   {
-    "task": "Extract the AWS region from an S3 bucket ARN like 'arn:aws:s3:::my-bucket-us-east-1'",
-    "format": "regex"
+    "task": "Parse an AWS CloudWatch log entry and extract the timestamp, log level, and message using a regular expression",
+    "format": "regex",
+    "solution_criteria": "The regex should correctly capture the timestamp (ISO 8601 format), log level (INFO, ERROR, WARNING, DEBUG), and the remaining message content from a standard CloudWatch log line"
   },
   {
-    "task": "Create a JSON CloudFormation template that defines an S3 bucket with versioning enabled",
-    "format": "json"
+    "task": "Write a Python function that takes an AWS S3 bucket name and returns True if it follows AWS naming conventions (lowercase, 3-63 characters, no underscores)",
+    "format": "python",
+    "solution_criteria": "The function should validate all AWS S3 bucket naming rules and return a boolean; it should handle edge cases like names that are too short, too long, contain uppercase letters, or have invalid characters"
   },
   {
-    "task": "Write a Python function that takes an AWS IAM policy document and returns all the actions (Action field values) that are allowed",
-    "format": "python"
+    "task": "Generate a JSON object representing an AWS IAM policy that allows read-only access to a specific S3 bucket named 'my-data-bucket'",
+    "format": "json",
+    "solution_criteria": "The JSON should be a valid IAM policy document with correct structure, Effect, Action, and Resource fields; it should allow s3:GetObject and s3:ListBucket actions only for the specified bucket"
   }
 ]
