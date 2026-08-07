@@ -1,17 +1,51 @@
 [
   {
-    "task": "Parse an AWS CloudWatch log entry and extract the timestamp, log level, and message using a regular expression",
-    "format": "regex",
-    "solution_criteria": "The regex should correctly capture the timestamp (ISO 8601 format), log level (INFO, ERROR, WARNING, DEBUG), and the remaining message content from a standard CloudWatch log line"
+    "prompt_inputs": {
+      "risk_tolerance": "low",
+      "time_horizon": "long-term",
+      "capital": "$250,000",
+      "preferences": "dividend-paying stocks, bonds, utility companies, stable blue-chip firms",
+      "avoid": "cryptocurrencies, growth stocks, emerging markets, speculative sectors"
+    },
+    "solution_criteria": [
+      "Suggests a single low-volatility investment appropriate for capital preservation and steady income generation",
+      "Includes clear rationale explaining why the investment matches the conservative profile",
+      "Identifies 2-3 key risks relevant to the suggested investment"
+    ],
+    "task_description": "Generate one concise investment idea tailored to the user's profile, with a brief rationale and key risks.",
+    "scenario": "Testing with a conservative, risk-averse retiree profile seeking steady income - evaluates whether the prompt generates appropriate low-volatility investment suggestions with emphasis on preservation of capital and dividend yield"
   },
   {
-    "task": "Write a Python function that takes an AWS S3 bucket name and returns True if it follows AWS naming conventions (lowercase, 3-63 characters, no underscores)",
-    "format": "python",
-    "solution_criteria": "The function should validate all AWS S3 bucket naming rules and return a boolean; it should handle edge cases like names that are too short, too long, contain uppercase letters, or have invalid characters"
+    "prompt_inputs": {
+      "risk_tolerance": "high",
+      "time_horizon": "long-term",
+      "capital": "$50,000",
+      "preferences": "technology, emerging markets, high-growth sectors",
+      "avoid": "utilities, consumer staples, dividend-focused stocks"
+    },
+    "solution_criteria": [
+      "Investment idea targets high-growth potential aligned with aggressive risk profile",
+      "Rationale explicitly connects to long-term wealth accumulation and sector momentum",
+      "Key risks identified are specific and material to the suggested opportunity"
+    ],
+    "task_description": "Generate one concise investment idea tailored to the user's profile, with a brief rationale and key risks.",
+    "scenario": "Testing with an aggressive, growth-focused young professional with high risk tolerance and long time horizon - assesses if the prompt can identify higher-risk/higher-reward opportunities and articulate growth-oriented rationales"
   },
   {
-    "task": "Generate a JSON object representing an AWS IAM policy that allows read-only access to a specific S3 bucket named 'my-data-bucket'",
-    "format": "json",
-    "solution_criteria": "The JSON should be a valid IAM policy document with correct structure, Effect, Action, and Resource fields; it should allow s3:GetObject and s3:ListBucket actions only for the specified bucket"
+    "prompt_inputs": {
+      "risk_tolerance": "moderate",
+      "time_horizon": "medium-term",
+      "capital": "$50,000",
+      "preferences": "ESG-focused companies, renewable energy, sustainable agriculture, clean technology sector",
+      "avoid": "fossil fuels, tobacco, weapons manufacturing, companies with poor labor practices"
+    },
+    "solution_criteria": [
+      "Investment idea aligns with ESG/sustainable values and stated preferences",
+      "Rationale addresses financial viability and market fundamentals, not just values alignment",
+      "Key risks identified are specific, material, and realistic for the suggested investment",
+      "Recommendation is appropriate for moderate risk tolerance and medium-term horizon"
+    ],
+    "task_description": "Generate one concise investment idea tailored to the user's profile, with a brief rationale and key risks.",
+    "scenario": "Testing with a sector-specific investor interested in ESG/sustainable investments with moderate risk tolerance - determines if the prompt can tailor suggestions to values-based constraints while maintaining realistic risk assessment and financial viability"
   }
 ]
