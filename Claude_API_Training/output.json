@@ -1,0 +1,66 @@
+[
+  {
+    "output": "# Investment Idea: Dividend Aristocrats Index Fund\n\n## Overview\nA diversified fund tracking companies with 25+ years of consecutive dividend increases (such as those in the NOBL or SDY ETFs). This approach combines blue-chip stability with proven commitment to returning cash to shareholders, aligning well with low-risk, income-focused strategies over long holding periods.\n\n## Why It Fits Your Profile\n- **Dividend income + stability**: These are established, financially healthy firms with predictable cash flows and transparent dividend policies\n- **Blue-chip diversification**: Exposure to companies like 3M, Procter & Gamble, and Johnson & Johnson reduces single-company risk\n- **Long-term alignment**: Dividend aristocrats have historically performed steadily over decades, rewarding patient investors\n- **Lower volatility**: These firms typically experience smaller price swings than growth-oriented alternatives\n\n## Key Risks to Consider\n1. **Interest rate sensitivity**: Rising rates can reduce the relative attractiveness of dividend stocks and create price pressure\n2. **Dividend cuts**: Even aristocrats can reduce payouts during severe recessions or sector downturns\n3. **Inflation erosion**: Fixed or slowly growing dividends may lose purchasing power in a high-inflation environment\n\n---\n*This is educational information only and not personalized financial advice. Consult a qualified financial advisor before making investment decisions.*",
+    "test_case": {
+      "prompt_inputs": {
+        "risk_tolerance": "low",
+        "time_horizon": "long-term",
+        "capital": "$250,000",
+        "preferences": "dividend-paying stocks, bonds, utility companies, stable blue-chip firms",
+        "avoid": "cryptocurrencies, growth stocks, emerging markets, speculative sectors"
+      },
+      "solution_criteria": [
+        "Suggests a single low-volatility investment appropriate for capital preservation and steady income generation",
+        "Includes clear rationale explaining why the investment matches the conservative profile",
+        "Identifies 2-3 key risks relevant to the suggested investment"
+      ],
+      "task_description": "Generate one concise investment idea tailored to the user's profile, with a brief rationale and key risks.",
+      "scenario": "Testing with a conservative, risk-averse retiree profile seeking steady income - evaluates whether the prompt generates appropriate low-volatility investment suggestions with emphasis on preservation of capital and dividend yield"
+    },
+    "score": 7,
+    "reasoning": "The solution meets all three mandatory criteria: it suggests a single, low-volatility investment appropriate for capital preservation and income (Dividend Aristocrats ETF), includes clear rationale explaining the match to the conservative profile, and identifies three relevant risks. However, there is a notable gap in addressing the user's stated preference for bonds alongside dividend stocks. For a low-risk, long-term investor with $250,000, a balanced approach incorporating both equities and fixed income is typically more appropriate than equities alone. The solution also lacks practical guidance on capital allocation. These are secondary deficiencies that prevent a perfect score, but the core requirements are solidly met."
+  },
+  {
+    "output": "# Investment Idea: Emerging Markets Technology ETF\n\n## Overview\nAn exchange-traded fund (ETF) focused on technology companies in emerging markets combines exposure to high-growth sectors in developing economies. This approach aligns with a long-term horizon by allowing time to weather volatility while capturing potential outsized returns from tech adoption in regions with younger, digitally-native populations.\n\n## Why It Fits Your Profile\n- **High-growth potential**: Emerging market tech companies often grow faster than mature-market peers as digital infrastructure expands\n- **Sector alignment**: Direct exposure to technology and innovation-driven businesses\n- **Risk tolerance match**: ETF structure provides diversification while emerging markets carry higher volatility\n- **Capital efficiency**: $50,000 can build a meaningful position with room for additional investments\n\n## Key Risks\n1. **Currency volatility**: Emerging market exposure introduces foreign exchange fluctuations that can amplify losses\n2. **Political and regulatory uncertainty**: Government policy changes, capital controls, or sanctions can impact valuations and liquidity\n3. **Valuation and liquidity**: Some holdings may trade less frequently and face sharp drawdowns during market stress or sentiment shifts toward riskier assets\n\n---\n\n**Disclaimer**: This is educational information only and not personal financial advice. Consult a qualified financial advisor before making investment decisions.",
+    "test_case": {
+      "prompt_inputs": {
+        "risk_tolerance": "high",
+        "time_horizon": "long-term",
+        "capital": "$50,000",
+        "preferences": "technology, emerging markets, high-growth sectors",
+        "avoid": "utilities, consumer staples, dividend-focused stocks"
+      },
+      "solution_criteria": [
+        "Investment idea targets high-growth potential aligned with aggressive risk profile",
+        "Rationale explicitly connects to long-term wealth accumulation and sector momentum",
+        "Key risks identified are specific and material to the suggested opportunity"
+      ],
+      "task_description": "Generate one concise investment idea tailored to the user's profile, with a brief rationale and key risks.",
+      "scenario": "Testing with an aggressive, growth-focused young professional with high risk tolerance and long time horizon - assesses if the prompt can identify higher-risk/higher-reward opportunities and articulate growth-oriented rationales"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all three mandatory criteria. It targets high-growth potential aligned with an aggressive risk profile (emerging markets tech ETF is inherently high-volatility, high-return). The rationale explicitly connects to long-term wealth accumulation through volatility weathering and outsized returns, and addresses sector momentum via digital infrastructure expansion. The three key risks identified (currency, political/regulatory, valuation/liquidity) are specific, material, and directly applicable to the suggested investment. The solution is well-structured and appropriately scoped. Minor improvements could include more concrete implementation guidance and quantified growth expectations, but these are secondary enhancements rather than deficiencies against the stated criteria."
+  },
+  {
+    "output": "# Investment Idea: Clean Energy Infrastructure ETF\n\n## Rationale\nThis investment aligns with your ESG and renewable energy preferences by providing diversified exposure to companies operating solar, wind, and grid modernization infrastructure. The medium-term horizon suits the steady growth trajectory of the clean energy sector as global renewable capacity expands. An ETF structure offers lower costs and reduced single-company risk compared to individual stock selection.\n\n## Key Risks\n- **Policy Risk**: Government subsidies and renewable energy incentives can shift with political changes, affecting sector valuations\n- **Technology Risk**: Rapid innovation may obsolete current technologies or require significant capital reallocation\n- **Interest Rate Sensitivity**: Clean energy infrastructure is capital-intensive and sensitive to rising borrowing costs, which could impact returns\n\n## Important Disclaimers\nThis is educational information, not personalized financial advice. Past performance doesn't guarantee future results. Before investing, conduct thorough due diligence, review fund prospectuses, assess your complete financial situation, and consider consulting a qualified financial advisor.",
+    "test_case": {
+      "prompt_inputs": {
+        "risk_tolerance": "moderate",
+        "time_horizon": "medium-term",
+        "capital": "$50,000",
+        "preferences": "ESG-focused companies, renewable energy, sustainable agriculture, clean technology sector",
+        "avoid": "fossil fuels, tobacco, weapons manufacturing, companies with poor labor practices"
+      },
+      "solution_criteria": [
+        "Investment idea aligns with ESG/sustainable values and stated preferences",
+        "Rationale addresses financial viability and market fundamentals, not just values alignment",
+        "Key risks identified are specific, material, and realistic for the suggested investment",
+        "Recommendation is appropriate for moderate risk tolerance and medium-term horizon"
+      ],
+      "task_description": "Generate one concise investment idea tailored to the user's profile, with a brief rationale and key risks.",
+      "scenario": "Testing with a sector-specific investor interested in ESG/sustainable investments with moderate risk tolerance - determines if the prompt can tailor suggestions to values-based constraints while maintaining realistic risk assessment and financial viability"
+    },
+    "score": 7,
+    "reasoning": "The solution meets all four mandatory criteria: it aligns with ESG/sustainable values, provides financial rationale beyond values (diversification, sector fundamentals), identifies specific and realistic risks, and appropriately matches moderate risk tolerance and medium-term horizon. The ETF structure is sound for the profile. However, the solution lacks concrete specificity (no fund name/ticker) and actionable guidance (capital allocation), which are secondary deficiencies that prevent a perfect score. The disclaimers are appropriately included. The solution is solid but could be more complete in execution."
+  }
+]

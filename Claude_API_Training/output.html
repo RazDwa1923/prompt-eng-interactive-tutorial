@@ -1,0 +1,219 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">7.7 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">100.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a conservative, risk-averse retiree profile seeking steady income - evaluates whether the prompt generates appropriate low-volatility investment suggestions with emphasis on preservation of capital and dividend yield</td>
+                <td class="prompt-inputs"><strong>risk_tolerance:</strong> low<br><strong>time_horizon:</strong> long-term<br><strong>capital:</strong> $250,000<br><strong>preferences:</strong> dividend-paying stocks, bonds, utility companies, stable blue-chip firms<br><strong>avoid:</strong> cryptocurrencies, growth stocks, emerging markets, speculative sectors</td>
+                <td class="criteria">• Suggests a single low-volatility investment appropriate for capital preservation and steady income generation<br>• Includes clear rationale explaining why the investment matches the conservative profile<br>• Identifies 2-3 key risks relevant to the suggested investment</td>
+                <td class="output"><pre># Investment Idea: Dividend Aristocrats Index Fund
+
+## Overview
+A diversified fund tracking companies with 25+ years of consecutive dividend increases (such as those in the NOBL or SDY ETFs). This approach combines blue-chip stability with proven commitment to returning cash to shareholders, aligning well with low-risk, income-focused strategies over long holding periods.
+
+## Why It Fits Your Profile
+- **Dividend income + stability**: These are established, financially healthy firms with predictable cash flows and transparent dividend policies
+- **Blue-chip diversification**: Exposure to companies like 3M, Procter & Gamble, and Johnson & Johnson reduces single-company risk
+- **Long-term alignment**: Dividend aristocrats have historically performed steadily over decades, rewarding patient investors
+- **Lower volatility**: These firms typically experience smaller price swings than growth-oriented alternatives
+
+## Key Risks to Consider
+1. **Interest rate sensitivity**: Rising rates can reduce the relative attractiveness of dividend stocks and create price pressure
+2. **Dividend cuts**: Even aristocrats can reduce payouts during severe recessions or sector downturns
+3. **Inflation erosion**: Fixed or slowly growing dividends may lose purchasing power in a high-inflation environment
+
+---
+*This is educational information only and not personalized financial advice. Consult a qualified financial advisor before making investment decisions.*</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">The solution meets all three mandatory criteria: it suggests a single, low-volatility investment appropriate for capital preservation and income (Dividend Aristocrats ETF), includes clear rationale explaining the match to the conservative profile, and identifies three relevant risks. However, there is a notable gap in addressing the user's stated preference for bonds alongside dividend stocks. For a low-risk, long-term investor with $250,000, a balanced approach incorporating both equities and fixed income is typically more appropriate than equities alone. The solution also lacks practical guidance on capital allocation. These are secondary deficiencies that prevent a perfect score, but the core requirements are solidly met.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with an aggressive, growth-focused young professional with high risk tolerance and long time horizon - assesses if the prompt can identify higher-risk/higher-reward opportunities and articulate growth-oriented rationales</td>
+                <td class="prompt-inputs"><strong>risk_tolerance:</strong> high<br><strong>time_horizon:</strong> long-term<br><strong>capital:</strong> $50,000<br><strong>preferences:</strong> technology, emerging markets, high-growth sectors<br><strong>avoid:</strong> utilities, consumer staples, dividend-focused stocks</td>
+                <td class="criteria">• Investment idea targets high-growth potential aligned with aggressive risk profile<br>• Rationale explicitly connects to long-term wealth accumulation and sector momentum<br>• Key risks identified are specific and material to the suggested opportunity</td>
+                <td class="output"><pre># Investment Idea: Emerging Markets Technology ETF
+
+## Overview
+An exchange-traded fund (ETF) focused on technology companies in emerging markets combines exposure to high-growth sectors in developing economies. This approach aligns with a long-term horizon by allowing time to weather volatility while capturing potential outsized returns from tech adoption in regions with younger, digitally-native populations.
+
+## Why It Fits Your Profile
+- **High-growth potential**: Emerging market tech companies often grow faster than mature-market peers as digital infrastructure expands
+- **Sector alignment**: Direct exposure to technology and innovation-driven businesses
+- **Risk tolerance match**: ETF structure provides diversification while emerging markets carry higher volatility
+- **Capital efficiency**: $50,000 can build a meaningful position with room for additional investments
+
+## Key Risks
+1. **Currency volatility**: Emerging market exposure introduces foreign exchange fluctuations that can amplify losses
+2. **Political and regulatory uncertainty**: Government policy changes, capital controls, or sanctions can impact valuations and liquidity
+3. **Valuation and liquidity**: Some holdings may trade less frequently and face sharp drawdowns during market stress or sentiment shifts toward riskier assets
+
+---
+
+**Disclaimer**: This is educational information only and not personal financial advice. Consult a qualified financial advisor before making investment decisions.</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution meets all three mandatory criteria. It targets high-growth potential aligned with an aggressive risk profile (emerging markets tech ETF is inherently high-volatility, high-return). The rationale explicitly connects to long-term wealth accumulation through volatility weathering and outsized returns, and addresses sector momentum via digital infrastructure expansion. The three key risks identified (currency, political/regulatory, valuation/liquidity) are specific, material, and directly applicable to the suggested investment. The solution is well-structured and appropriately scoped. Minor improvements could include more concrete implementation guidance and quantified growth expectations, but these are secondary enhancements rather than deficiencies against the stated criteria.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a sector-specific investor interested in ESG/sustainable investments with moderate risk tolerance - determines if the prompt can tailor suggestions to values-based constraints while maintaining realistic risk assessment and financial viability</td>
+                <td class="prompt-inputs"><strong>risk_tolerance:</strong> moderate<br><strong>time_horizon:</strong> medium-term<br><strong>capital:</strong> $50,000<br><strong>preferences:</strong> ESG-focused companies, renewable energy, sustainable agriculture, clean technology sector<br><strong>avoid:</strong> fossil fuels, tobacco, weapons manufacturing, companies with poor labor practices</td>
+                <td class="criteria">• Investment idea aligns with ESG/sustainable values and stated preferences<br>• Rationale addresses financial viability and market fundamentals, not just values alignment<br>• Key risks identified are specific, material, and realistic for the suggested investment<br>• Recommendation is appropriate for moderate risk tolerance and medium-term horizon</td>
+                <td class="output"><pre># Investment Idea: Clean Energy Infrastructure ETF
+
+## Rationale
+This investment aligns with your ESG and renewable energy preferences by providing diversified exposure to companies operating solar, wind, and grid modernization infrastructure. The medium-term horizon suits the steady growth trajectory of the clean energy sector as global renewable capacity expands. An ETF structure offers lower costs and reduced single-company risk compared to individual stock selection.
+
+## Key Risks
+- **Policy Risk**: Government subsidies and renewable energy incentives can shift with political changes, affecting sector valuations
+- **Technology Risk**: Rapid innovation may obsolete current technologies or require significant capital reallocation
+- **Interest Rate Sensitivity**: Clean energy infrastructure is capital-intensive and sensitive to rising borrowing costs, which could impact returns
+
+## Important Disclaimers
+This is educational information, not personalized financial advice. Past performance doesn't guarantee future results. Before investing, conduct thorough due diligence, review fund prospectuses, assess your complete financial situation, and consider consulting a qualified financial advisor.</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">The solution meets all four mandatory criteria: it aligns with ESG/sustainable values, provides financial rationale beyond values (diversification, sector fundamentals), identifies specific and realistic risks, and appropriately matches moderate risk tolerance and medium-term horizon. The ETF structure is sound for the profile. However, the solution lacks concrete specificity (no fund name/ticker) and actionable guidance (capital allocation), which are secondary deficiencies that prevent a perfect score. The disclaimers are appropriately included. The solution is solid but could be more complete in execution.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
