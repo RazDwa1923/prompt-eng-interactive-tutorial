@@ -1,58 +1,19 @@
-# Welcome to Anthropic's Prompt Engineering Interactive Tutorial
+# Claude API Playground
 
-## Course introduction and goals
+This started as Anthropic's official prompt-engineering course and has since grown into my personal playground for learning the Claude API and Claude Code. It's no longer just "the tutorial" — it's a few loosely related learning projects living side by side in one repo.
 
-This course is intended to provide you with a comprehensive step-by-step understanding of how to engineer optimal prompts within Claude.
+## What's in here
 
-**After completing this course, you will be able to**:
-- Master the basic structure of a good prompt 
-- Recognize common failure modes and learn the '80/20' techniques to address them
-- Understand Claude's strengths and weaknesses
-- Build strong prompts from scratch for common use cases
+- **`Anthropic 1P/`** — Where this repo started: Anthropic's official prompt-engineering course, run against the direct Anthropic API. Structured as 9 chapters (basic prompt structure → clear & direct → roles → separating data/instructions → formatting output → precognition/step-by-step → few-shot examples → avoiding hallucinations → complex prompts) plus an appendix (chaining prompts, tool use, search & retrieval). Each notebook has an "Example Playground" section for experimenting.
 
-## Course structure and content
+- **`AmazonBedrock/`** — The same course content, bundled by Anthropic as a Bedrock-flavored port (two implementations: `anthropic/` via the Anthropic SDK, `boto3/` via raw boto3, plus a CloudFormation template for a Bedrock workshop stack). Not something I've actually used — kept as unused reference material since it shipped with the original course.
 
-This course is structured to allow you many chances to practice writing and troubleshooting prompts yourself. The course is broken up into **9 chapters with accompanying exercises**, as well as an appendix of even more advanced methods. It is intended for you to **work through the course in chapter order**. 
+- **`Claude_API_Training/`** — A separate, more advanced course I'm working through on my own, covering tool use, iterative chat, the text-edit and web-search tools, and building RAG pipelines. Independent of the two directories above.
 
-**Each lesson has an "Example Playground" area** at the bottom where you are free to experiment with the examples in the lesson and see for yourself how changing prompts can change Claude's responses. There is also an [answer key](https://docs.google.com/spreadsheets/d/1jIxjzUWG-6xBVIa2ay6yDpLyeuOh_hR_ZB75a47KX_E/edit?usp=sharing).
+- **`MCP App/`** — A standalone Python CLI app I added to learn the Model Context Protocol (MCP): how MCP clients and servers work together, and how that fits into the Claude API's tool-use loop. See `MCP App/README.md` for setup/run instructions and `MCP App/LESSONS.md` for a walkthrough of what it demonstrates and what to try.
 
-Note: This tutorial uses our smallest, fastest, and cheapest model, Claude 3 Haiku. Anthropic has [two other models](https://docs.anthropic.com/claude/docs/models-overview), Claude 3 Sonnet and Claude 3 Opus, which are more intelligent than Haiku, with Opus being the most intelligent.
+## Setup
 
-*This tutorial also exists on [Google Sheets using Anthropic's Claude for Sheets extension](https://docs.google.com/spreadsheets/d/19jzLgRruG9kjUQNKtCg1ZjdD6l6weA6qRXG5zLIAhC8/edit?usp=sharing). We recommend using that version as it is more user friendly.*
+There's no shared setup across the repo — each directory manages its own dependencies and its own `.env` (all git-ignored). See the relevant subdirectory for specifics; `MCP App/README.md` has the most detail since it's the one runnable application rather than a set of notebooks.
 
-When you are ready to begin, go to `01_Basic Prompt Structure` to proceed.
-
-## Table of Contents
-
-Each chapter consists of a lesson and a set of exercises.
-
-### Beginner
-- **Chapter 1:** Basic Prompt Structure
-
-- **Chapter 2:** Being Clear and Direct  
-
-- **Chapter 3:** Assigning Roles
-
-### Intermediate 
-- **Chapter 4:** Separating Data from Instructions
-
-- **Chapter 5:** Formatting Output & Speaking for Claude
-
-- **Chapter 6:** Precognition (Thinking Step by Step)
-
-- **Chapter 7:** Using Examples
-
-### Advanced
-- **Chapter 8:** Avoiding Hallucinations
-
-- **Chapter 9:** Building Complex Prompts (Industry Use Cases)
-  - Complex Prompts from Scratch - Chatbot
-  - Complex Prompts for Legal Services
-  - **Exercise:** Complex Prompts for Financial Services
-  - **Exercise:** Complex Prompts for Coding
-  - Congratulations & Next Steps
-
-- **Appendix:** Beyond Standard Prompting
-  - Chaining Prompts
-  - Tool Use
-  - Search & Retrieval
+See `CLAUDE.md` for a more detailed architecture/commands reference if you're using Claude Code in this repo.
